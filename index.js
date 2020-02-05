@@ -1,0 +1,1 @@
+module.exports = require("./_dist/slimlabs-viewer-sdk.min.umd");

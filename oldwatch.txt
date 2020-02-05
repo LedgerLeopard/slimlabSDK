@@ -1,0 +1,1 @@
+"watch": "watch 'echo Removing old packages && rm -rf node_modules/slimlabs_viewer_api_sdk && mkdir node_modules/slimlabs_viewer_api_sdk && cp -a ../../viewer_api_sdk/_dist/. node_modules/slimlabs_viewer_api_sdk/_dist/ && echo Installed && date' ../../viewer_api_sdk/_dist --wait=1",

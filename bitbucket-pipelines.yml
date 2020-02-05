@@ -1,0 +1,20 @@
+image: node:boron
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          script:
+            - echo "This script runs only on commit to the master branch."
+    develop:
+      - step:
+          caches:
+            - node
+          script:
+            - printf "//`node -p \"require('url').parse(process.env.NPM_REGISTRY_URL || 'https://registry.npmjs.org').host\"`/:_authToken=${NPM_TOKEN}\nregistry=${NPM_REGISTRY_URL:-https://registry.npmjs.org}\n" >> ~/.npmrc
+            - npm install
+            - npm run write-ftp-config -- FTP_USER:$FTP_USER FTP_PASS:$FTP_PASS
+            - npm run build
+            - npm run cleanse-pkg
+            - npm publish

@@ -1,0 +1,5 @@
+CHANGE:
+gl_FragColor = vec4( outgoingLight, diffuseColor.a );
+
+TO:
+if ( gl_FrontFacing ) {gl_FragColor = vec4( outgoingLight, diffuseColor.a );} else {gl_FragColor = diffuseColor;}

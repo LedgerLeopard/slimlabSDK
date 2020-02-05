@@ -1,0 +1,79 @@
+{
+	"name": "slimlabs-viewer-api-sdk",
+	"version": "1.4.11",
+	"description": "Viewer API front end SDK",
+	"main": "_dist/latest/slimlabs-viewer-sdk.min.umd.js",
+	"files": [
+		"_dist/*",
+		"index.js"
+	],
+	"scripts": {
+		"write-ftp-config": "node ./write-ftp-config.js",
+		"watch": "webpack --env.TARGET=DEV --watch --progress",
+		"build": "npm run docs && webpack --progress --env.TARGET=BUILD",
+		"local-build": "npm run docs && webpack --progress --env.TARGET=LOCAL_BUILD",
+		"docs": "mkdir -p _dist && mkdir -p ./_dist/_docs && cp -r ./images ./_dist/_docs/ && jsdoc -c jsdoc.conf.json -d ./_dist/_docs/",
+		"cleanse-pkg": "node ./cleanse-pkg-json.js"
+	},
+	"author": {
+		"email": "wco@slimlabs.nl",
+		"name": "Wouter Coebergh",
+		"url": "https://www.linkedin.com/in/cbrghbrk/"
+	},
+	"license": "UNLICENSED",
+	"homepage": "http://www.slimlabs.nl/dev/viewer",
+	"jshintConfig": {
+		"esversion": "6"
+	},
+	"devDependencies": {
+		"array-sort": "^0.1.4",
+		"async": "^2.6.0",
+		"before-build-webpack": "^0.1.0",
+		"browserify": "^14.4.0",
+		"bundle-loader": "^0.5.5",
+		"copy-dir": "^0.3.0",
+		"css-loader": "^0.23.1",
+		"d3": "^4.13.0",
+		"eslint": "^3.2.2",
+		"eslint-config-google": "^0.6.0",
+		"expose-loader": "^0.7.3",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"file-loader": "^0.9.0",
+		"filemanager-webpack-plugin": "^1.0.24",
+		"fs-copy-file-sync": "^1.0.1",
+		"ftp-client": "^0.2.2",
+		"ftp-deploy": "^1.2.2",
+		"html-loader": "^0.5.5",
+		"javascript-detect-element-resize": "^0.5.3",
+		"jquery": "^1.11.0",
+		"jsdoc": "^3.5.5",
+		"jspdf-yworks": "^1.3.1",
+		"mkdirp": "^0.5.1",
+		"node-delete": "^0.1.2",
+		"oboe": "^2.1.4",
+		"on-build-webpack": "^0.1.0",
+		"path": "^0.12.7",
+		"point-in-svg-polygon": "^1.0.20",
+		"request": "^2.83.0",
+		"resolve-url-loader": "^1.5.11",
+		"rimraf": "^2.6.2",
+		"slimjsdoctheme": "^1.0.0",
+		"style-loader": "^0.13.1",
+		"svg2pdf.js": "^1.2.0",
+		"uglify-js": "^2.7.0",
+		"uglifyjs-folder": "^1.1.0",
+		"url-loader": "^0.5.7",
+		"validator": "^7.0.0",
+		"watch": "^1.0.2",
+		"webpack": "3.x",
+		"webpack-sftp-client": "^1.2.1",
+		"worker-loader": "^1.1.1"
+	},
+	"dependencies": {
+		"@tweenjs/tween.js": "^17.2.0",
+		"css-element-queries": "^1.0.2",
+		"detect-resize": "^0.1.5",
+		"element-resize-event": "^2.0.9",
+		"resize-event": "^1.1.0"
+	}
+}
