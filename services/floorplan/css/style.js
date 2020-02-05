@@ -3,13 +3,12 @@
 	'use strict';
 
 
-	// NOTE: ORDER MATTERS FOR THE GENERATION OF PDF'S. 
+	// NOTE: ORDER MATTERS FOR THE GENERATION OF PDF'S.
 
 	module.exports = {
 
 		"#planDWG path, #planDWG circle": {
-			"stroke": "#000",
-			"stroke-width": 20,
+			"stroke-width": 1,
 		},
 
 		".floor-plan-object-path": {
