@@ -63,7 +63,7 @@
 		"uglify-js": "^2.7.0",
 		"uglifyjs-folder": "^1.1.0",
 		"url-loader": "^0.5.7",
-		"validator": "^7.0.0",
+		"validator": "^13.7.0",
 		"watch": "^1.0.2",
 		"webpack": "3.x",
 		"webpack-sftp-client": "^1.2.1",
